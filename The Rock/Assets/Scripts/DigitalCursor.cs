@@ -68,4 +68,9 @@ public class DigitalCursor : MonoBehaviour
     {
         Debug.Log("Button clicked");
     }
+
+    public Image GetCursor()
+    {
+        return GetComponent<Image>();
+    }
 }
