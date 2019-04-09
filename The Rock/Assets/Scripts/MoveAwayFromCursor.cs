@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveAwayFromCursor : MonoBehaviour
 {
+    [SerializeField] private float speed;
+
     Vector3 heading;
     public GameObject cursor;
 
@@ -31,12 +33,12 @@ public class MoveAwayFromCursor : MonoBehaviour
 
         heading = transform.position - cursor.transform.position;
 
-        if (transform.localPosition.x < 0 - ((ParentRT.rect.width / 2) - myWidth) || transform.localPosition.x > ((ParentRT.rect.width / 2) - myWidth))
+        if ((transform.localPosition.x < 0 - ((ParentRT.rect.width / 2) - myWidth) && heading.x < 0) || (transform.localPosition.x > ((ParentRT.rect.width / 2) - myWidth) && heading.x > 0))
             restrictX = true;
         else
             restrictX = false;
 
-        if (transform.localPosition.y < 0 - ((ParentRT.rect.height / 2) - myHeight) || transform.localPosition.y > ((ParentRT.rect.height / 2) - myHeight))
+        if ((transform.localPosition.y < 0 - ((ParentRT.rect.height / 2) - myHeight) && heading.y < 0) || (transform.localPosition.y > ((ParentRT.rect.height / 2) - myHeight) && heading.y > 0))
             restrictY = true;
         else
             restrictY = false;
@@ -51,6 +53,6 @@ public class MoveAwayFromCursor : MonoBehaviour
         }
 
 
-        transform.position += heading.normalized;
+        transform.position += heading.normalized * speed;
     }
 }
