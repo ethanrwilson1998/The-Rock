@@ -34,8 +34,6 @@ public class SimpleMouseCameraMovement : MonoBehaviour
         float x = cursor.rectTransform.position.x / Screen.width - 0.5f;
         float y = cursor.rectTransform.position.y / Screen.height - 0.5f;
 
-        Debug.Log(string.Format("X: {0}, Y: {1}", x, y));
-
         Vector3 goal = start;
 
         if (Mathf.Abs(x) > xSens)

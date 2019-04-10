@@ -59,8 +59,20 @@ public class DigitalCursor : MonoBehaviour
         {
             if (result.gameObject.GetComponent<Button>())
             {
+                Debug.Log("yes");
                 ExecuteEvents.Execute(result.gameObject, new BaseEventData(eventSystem), ExecuteEvents.submitHandler);
             }
+        }
+
+        // for physical button
+
+        var ray = Camera.main.ScreenPointToRay(transform.position);
+        RaycastHit Hit;
+
+        if (Physics.Raycast(ray, out Hit) && Hit.collider.gameObject.GetComponent<PhysicalButton>())
+        {
+            Debug.Log("Physical Button Clicked");
+            Hit.collider.gameObject.GetComponent<PhysicalButton>().Click();
         }
     }
 

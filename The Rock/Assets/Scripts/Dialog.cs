@@ -14,10 +14,36 @@ public class Dialog : MonoBehaviour
     [SerializeField] private List<DialogInstance> instances;
     private int index;
 
+    private bool clicked;
+
     private void Start()
     {
         Hide();
         instance = instances[index++];
+    }
+
+    private void LateUpdate()
+    {
+        if (clicked)
+        {
+            string t = instance.getNextDialog();
+
+            if (t == "<choice>")
+            {
+                dialog.text = "";
+                instance.EnableButtons();
+            }
+            else if (t == null)
+            {
+                Hide();
+                instance.Reset();
+            }
+            else
+            {
+                dialog.text = t;
+            }
+        }
+        clicked = false;
     }
 
     public void EnableDialogBox()
@@ -52,24 +78,7 @@ public class Dialog : MonoBehaviour
 
     public void OnBoxClicked()
     {
-        Debug.Log("Box clicked");
-
-        string t = instance.getNextDialog();
-
-        if (t == "<choice>")
-        {
-            dialog.text = "";
-            instance.EnableButtons();
-        }
-        else if (t == null)
-        {
-            Hide();
-            instance.Reset();
-        }
-        else
-        {
-            dialog.text = t;
-        }
+        clicked = true;
 
     }
 
