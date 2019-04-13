@@ -39,6 +39,8 @@ public class DigitalCursor : MonoBehaviour
             cursor.transform.position = cursor.transform.position + new Vector3(0f, Input.GetAxis("Mouse Y") * ysensitivity, 0f);
            
         }
+        // clamp it
+        cursor.transform.position = new Vector3(Mathf.Clamp(cursor.transform.position.x, 0, Screen.width), Mathf.Clamp(cursor.transform.position.y, 0, Screen.height), 0);
 
         if (Input.GetMouseButtonDown(0))
         {
