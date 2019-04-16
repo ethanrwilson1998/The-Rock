@@ -24,6 +24,14 @@ public class MoveAwayFromCursor : MonoBehaviour
         MyRect = GetComponent<RectTransform>();
         myWidth = (MyRect.rect.width + 5) / 2;
         myHeight = (MyRect.rect.height + 5) / 2;
+        if (cursor == null)
+        {
+            cursor = FindObjectOfType<DigitalCursor>().gameObject;
+        }
+        if (ParentRT == null)
+        {
+            ParentRT = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+        }
     }
 
     // Update is called once per frame
