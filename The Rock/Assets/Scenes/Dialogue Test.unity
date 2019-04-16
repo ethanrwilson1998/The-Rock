@@ -888,6 +888,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3010006208849960846, guid: 3a9bf26d9ec5c774e8f78aafc1071dea,
+        type: 3}
+      propertyPath: speakerName
+      value: Casper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010006210855746588, guid: 3a9bf26d9ec5c774e8f78aafc1071dea,
+        type: 3}
+      propertyPath: speakerName
+      value: Casper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9bf26d9ec5c774e8f78aafc1071dea, type: 3}
 --- !u!1001 &7166772781378340769

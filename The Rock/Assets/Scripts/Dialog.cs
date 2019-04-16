@@ -16,6 +16,10 @@ public class Dialog : MonoBehaviour
 
     private bool clicked;
 
+    public delegate void LockCamera();
+    public static event LockCamera OnDialogueStart;
+    public static event LockCamera OnDialogueEnd;
+
     private void Start()
     {
         Hide();
@@ -35,6 +39,7 @@ public class Dialog : MonoBehaviour
             }
             else if (t == null)
             {
+               
                 Hide();
                 instance.Reset();
             }
@@ -49,6 +54,7 @@ public class Dialog : MonoBehaviour
     public void EnableDialogBox()
     {
         Show();
+        OnDialogueStart.Invoke();
         title.text = instance.getSpeakerName();
         instance.DisableButtons();
         OnBoxClicked();
@@ -67,6 +73,7 @@ public class Dialog : MonoBehaviour
 
     public void Hide()
     {
+        OnDialogueEnd.Invoke();
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).GetType() != typeof(Button))
