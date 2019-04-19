@@ -15,10 +15,14 @@ public class Dialog : MonoBehaviour
     private int index;
 
     private bool clicked;
+    [SerializeField] private bool importantDialogue;
 
     public delegate void LockCamera();
     public static event LockCamera OnDialogueStart;
     public static event LockCamera OnDialogueEnd;
+
+    public delegate void ImportantDialogue();
+    public static event ImportantDialogue ImportantDialogueComplete;
 
     private void Start()
     {
@@ -110,5 +114,8 @@ public class Dialog : MonoBehaviour
         Hide();
     }
 
-
+    public void CorrectButtonChosen()
+    {
+        ImportantDialogueComplete.Invoke();
+    }
 }
