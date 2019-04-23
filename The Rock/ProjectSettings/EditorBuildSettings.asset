@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cursor Test.unity
     guid: 27f31b641b23fdb4aa61ea0a57468c9c
+  - enabled: 1
+    path: Assets/Scenes/Dialogues.unity
+    guid: c0b5a6be9a5ae01448f8e9bf571adee2
   m_configObjects: {}

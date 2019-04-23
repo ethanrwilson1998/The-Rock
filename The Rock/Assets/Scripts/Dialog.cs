@@ -41,6 +41,11 @@ public class Dialog : MonoBehaviour
                 dialog.text = "";
                 instance.EnableButtons();
             }
+            else if (t == "<next>")
+            {
+                AdvanceDialog();
+                EnableDialogBox();
+            }
             else if (t == null)
             {
                
