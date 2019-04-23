@@ -1646,7 +1646,6 @@ MonoBehaviour:
   dialog: {fileID: 2009811750}
   instances:
   - {fileID: 480418419}
-  importantDialogue: 0
 --- !u!1 &416770351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,7 +2537,6 @@ MonoBehaviour:
   - {fileID: 368676882}
   - {fileID: 1038897389}
   - {fileID: 416770353}
-  importantDialogue: 1
 --- !u!1 &672324436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2880,6 @@ MonoBehaviour:
   - {fileID: 580236947}
   - {fileID: 1336751622}
   - {fileID: 1397081674}
-  importantDialogue: 0
 --- !u!1 &774364772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,7 +3639,6 @@ MonoBehaviour:
   - {fileID: 1644518512}
   - {fileID: 494484211}
   - {fileID: 1664673703}
-  importantDialogue: 1
 --- !u!1 &1095612971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,7 +3694,6 @@ MonoBehaviour:
   dialog: {fileID: 111405596}
   instances:
   - {fileID: 1485744162}
-  importantDialogue: 0
 --- !u!1 &1107101350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,6 +3855,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 667468830}
         m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 667468830}
+        m_MethodName: CorrectButtonChosen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4510,7 +4516,6 @@ MonoBehaviour:
   - {fileID: 1190847795}
   - {fileID: 1825373634}
   - {fileID: 1246642469}
-  importantDialogue: 1
 --- !u!1 &1336751620
 GameObject:
   m_ObjectHideFlags: 0
@@ -5505,7 +5510,6 @@ MonoBehaviour:
   dialog: {fileID: 1425885706}
   instances:
   - {fileID: 258008007}
-  importantDialogue: 0
 --- !u!1 &1520851881
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,7 +7436,6 @@ MonoBehaviour:
   - {fileID: 1954451064}
   - {fileID: 403447666}
   - {fileID: 640835419}
-  importantDialogue: 0
 --- !u!1 &1952379704
 GameObject:
   m_ObjectHideFlags: 0
@@ -7492,7 +7495,6 @@ MonoBehaviour:
   - {fileID: 1708124354}
   - {fileID: 1308375868}
   - {fileID: 557862165}
-  importantDialogue: 0
 --- !u!1 &1954451062
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class Dialog : MonoBehaviour
     private int index;
 
     private bool clicked;
-    [SerializeField] private bool importantDialogue;
+    //[SerializeField] private bool importantDialogue;
 
     public delegate void LockCamera();
     public static event LockCamera OnDialogueStart;
@@ -45,6 +45,16 @@ public class Dialog : MonoBehaviour
             {
                 AdvanceDialog();
                 EnableDialogBox();
+                t = instance.getNextDialog();
+                if (t == "<choice>")
+                {
+                    dialog.text = "";
+                    instance.EnableButtons();
+                }
+                else
+                {
+                    dialog.text = t;
+                }
             }
             else if (t == null)
             {
