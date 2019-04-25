@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogInstance : MonoBehaviour
@@ -12,6 +13,8 @@ public class DialogInstance : MonoBehaviour
     private int index;
 
     [SerializeField] private List<Button> buttons;
+
+    [SerializeField] private UnityEvent doOnFinish;
 
     private bool buttonsOn;
 
@@ -29,6 +32,10 @@ public class DialogInstance : MonoBehaviour
 
         if (index >= dialogues.Count)
         {
+            if (doOnFinish != null)
+            {
+                doOnFinish.Invoke();
+            }
             return null;
         }
 

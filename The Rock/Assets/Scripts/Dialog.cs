@@ -43,6 +43,13 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    public void DisableThisDialog()
+    {
+        gameObject.SetActive(false);
+    }
+
+
+
     private void LateUpdate()
     {
         if (clicked)
