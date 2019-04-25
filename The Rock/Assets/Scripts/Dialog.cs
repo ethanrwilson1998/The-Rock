@@ -93,7 +93,7 @@ public class Dialog : MonoBehaviour
     public void EnableDialogBox()
     {
         Show();
-        OnDialogueStart.Invoke();
+        if (OnDialogueStart != null) { OnDialogueStart.Invoke(); }
         title.text = instance.getSpeakerName();
         instance.DisableButtons();
         OnBoxClicked();
@@ -112,7 +112,7 @@ public class Dialog : MonoBehaviour
 
     public void Hide()
     {
-        OnDialogueEnd.Invoke();
+        if (OnDialogueEnd != null) { OnDialogueEnd.Invoke(); }
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).GetType() != typeof(Button))
@@ -154,6 +154,6 @@ public class Dialog : MonoBehaviour
 
     public void CorrectButtonChosen()
     {
-        ImportantDialogueComplete.Invoke();
+        if (ImportantDialogueComplete != null) { ImportantDialogueComplete.Invoke(); }
     }
 }

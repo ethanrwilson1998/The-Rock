@@ -14,4 +14,9 @@ public class UIUtility : MonoBehaviour
     {
         SceneManager.LoadScene(x);
     }
+
+    public void EnableGameObject(GameObject o)
+    {
+        o.SetActive(true);
+    }
 }
