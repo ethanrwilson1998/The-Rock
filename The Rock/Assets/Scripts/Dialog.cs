@@ -30,6 +30,19 @@ public class Dialog : MonoBehaviour
         instance = instances[index++];
     }
 
+    // for looping backwards, resetting dialog after clicking the wrong button?
+    public void ResetToFirstDialog()
+    {
+        TurnOffButtons();
+        index = 0;
+        instance = instances[index++];
+
+        foreach(DialogInstance i in instances)
+        {
+            i.Reset();
+        }
+    }
+
     private void LateUpdate()
     {
         if (clicked)
@@ -104,7 +117,10 @@ public class Dialog : MonoBehaviour
 
     public void OnBoxClicked()
     {
-        clicked = true;
+
+
+        if (!instance.ButtonsOn())
+            clicked = true;
 
     }
 

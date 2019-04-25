@@ -13,6 +13,8 @@ public class DialogInstance : MonoBehaviour
 
     [SerializeField] private List<Button> buttons;
 
+    private bool buttonsOn;
+
     private void Start()
     {
         DisableButtons();
@@ -39,6 +41,7 @@ public class DialogInstance : MonoBehaviour
 
     public void EnableButtons()
     {
+        buttonsOn = true;
         foreach (Button b in buttons)
         {
             b.gameObject.SetActive(true);
@@ -47,9 +50,12 @@ public class DialogInstance : MonoBehaviour
 
     public void DisableButtons()
     {
+        buttonsOn = false;
         foreach (Button b in buttons)
         {
             b.gameObject.SetActive(false);
         }
     }
+
+    public bool ButtonsOn() { return buttonsOn; }
 }
