@@ -926,6 +926,23 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1145501520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145501518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d01581c26e25f94e85eaeccd587bc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 1145501521}
+  momArrow: {fileID: 1323779784}
+  isMom: 1
+  isTeacher: 0
+  isMagistrate: 0
 --- !u!64 &1145501521 stripped
 MeshCollider:
   m_CorrespondingSourceObject: {fileID: 143084611987983033, guid: 17af9043bf41bc84fb7af0bcc9f98a60,
