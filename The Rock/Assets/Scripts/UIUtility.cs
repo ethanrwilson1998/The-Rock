@@ -24,4 +24,11 @@ public class UIUtility : MonoBehaviour
     {
         b.enabled = false;
     }
+
+    public void GoToLastScene()
+    {
+        string x = FindObjectOfType<GameState>().getLastScene();
+
+        SceneManager.LoadScene(x);
+    }
 }

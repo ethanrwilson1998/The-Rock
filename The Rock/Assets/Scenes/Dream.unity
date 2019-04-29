@@ -551,7 +551,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Title
+          m_StringArgument: Casper's Room
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1595,9 +1595,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681551122}
-  m_Text: 'Click here to revert
-
-    and continue your quest'
+  m_Text: Wake Up!
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -1957,7 +1955,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156602200}
-  m_Text: You Failed
+  m_Text: OMG
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -2164,6 +2162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numDialoguesLeft: 4
+  momComplete: 0
+  teacherComplete: 0
+  magistrateComplete: 0
+  allDialoguesComplete: 0
 --- !u!4 &1241172988
 Transform:
   m_ObjectHideFlags: 0
@@ -2235,7 +2237,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372496866}
-  m_Text: You Failed
+  m_Text: OMG
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
@@ -2933,9 +2935,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922825210}
-  m_Text: 'Click here to revert
-
-    and continue your quest'
+  m_Text: Wake Up!
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
