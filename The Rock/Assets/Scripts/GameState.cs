@@ -75,4 +75,19 @@ public class GameState : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+
+    public bool IsMomComplete()
+    {
+        return momComplete;
+    }
+
+    public bool IsTeacherComplete()
+    {
+        return teacherComplete;
+    }
+
+    public bool IsMagistrateComplete()
+    {
+        return magistrateComplete;
+    }
 }
