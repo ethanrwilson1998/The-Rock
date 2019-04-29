@@ -1272,6 +1272,7 @@ MonoBehaviour:
   dialog: {fileID: 7006242658832412878}
   instances:
   - {fileID: 7006242658598459874}
+  enabledOnStart: 1
 --- !u!224 &7006242658094864937
 RectTransform:
   m_ObjectHideFlags: 0

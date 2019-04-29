@@ -24,10 +24,16 @@ public class Dialog : MonoBehaviour
     public delegate void ImportantDialogue();
     public static event ImportantDialogue ImportantDialogueComplete;
 
+    [SerializeField] private bool enabledOnStart = false;
+
     private void Start()
     {
         Hide();
         instance = instances[index++];
+        if (enabledOnStart)
+        {
+            EnableDialogBox();
+        }
     }
 
     // for looping backwards, resetting dialog after clicking the wrong button?
