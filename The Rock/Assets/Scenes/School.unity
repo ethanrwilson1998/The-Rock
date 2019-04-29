@@ -1358,6 +1358,7 @@ GameObject:
   - component: {fileID: 1076109881}
   - component: {fileID: 1076109880}
   - component: {fileID: 1076109879}
+  - component: {fileID: 1076109882}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1486,6 +1487,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076109877}
   m_CullTransparentMesh: 0
+--- !u!114 &1076109882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076109877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6eeb715973e564685a3e6bd6262a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  away: 0
+  digitalCursor: {fileID: 0}
 --- !u!114 &1115973851 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5613528642349799785, guid: 7352b05fd23a00c4095d8cd8acb3b91d,
@@ -1566,7 +1582,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1245020584}
   - component: {fileID: 1245020583}
-  - component: {fileID: 1245020582}
   - component: {fileID: 1245020581}
   - component: {fileID: 1245020580}
   m_Layer: 5
@@ -1638,6 +1653,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 624406977}
+        m_MethodName: CorrectButtonChosen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1245020581
@@ -1669,21 +1695,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1245020582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245020579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7ac07ed6e5ef46a7ba02ee1fa1221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  cursor: {fileID: 0}
-  ParentRT: {fileID: 0}
 --- !u!222 &1245020583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3394,7 +3405,19 @@ MonoBehaviour:
   buttons: []
   doOnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4307064424768950591, guid: 8be41ed44ff31e54da7322c6ef0c2642,
+          type: 3}
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1608718994906738788
@@ -3662,6 +3685,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1726892805490905312}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1726892805490905314 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3930097290937868487, guid: 65283e655aea98443b761de623f08e3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1726892805490905312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1824445671009077910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1055703169797479030, guid: 65283e655aea98443b761de623f08e3b,
@@ -3697,3 +3726,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1824445671009077912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824445671009077910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d01581c26e25f94e85eaeccd587bc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 1726892805490905314}
+  momArrow: {fileID: 0}
+  isMom: 0
+  isTeacher: 1
+  isMagistrate: 0

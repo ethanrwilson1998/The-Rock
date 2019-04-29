@@ -201,9 +201,9 @@ GameObject:
   m_Component:
   - component: {fileID: 161981315}
   - component: {fileID: 161981314}
-  - component: {fileID: 161981313}
   - component: {fileID: 161981312}
   - component: {fileID: 161981311}
+  - component: {fileID: 161981313}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -273,6 +273,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1089204544}
+        m_MethodName: CorrectButtonChosen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &161981312
@@ -313,10 +324,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 161981310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7ac07ed6e5ef46a7ba02ee1fa1221, type: 3}
+  m_Script: {fileID: 11500000, guid: 57830e5f9b3a4664c82cb767cbee2287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  numTeleports: 5
   cursor: {fileID: 0}
   ParentRT: {fileID: 0}
 --- !u!222 &161981314
@@ -687,7 +698,19 @@ MonoBehaviour:
   buttons: []
   doOnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4307064424768950591, guid: 8be41ed44ff31e54da7322c6ef0c2642,
+          type: 3}
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &468094076
@@ -880,9 +903,9 @@ GameObject:
   m_Component:
   - component: {fileID: 635853760}
   - component: {fileID: 635853763}
-  - component: {fileID: 635853762}
   - component: {fileID: 635853761}
   - component: {fileID: 635853764}
+  - component: {fileID: 635853762}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -948,10 +971,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 635853759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7ac07ed6e5ef46a7ba02ee1fa1221, type: 3}
+  m_Script: {fileID: 11500000, guid: 57830e5f9b3a4664c82cb767cbee2287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  numTeleports: 3
   cursor: {fileID: 0}
   ParentRT: {fileID: 0}
 --- !u!222 &635853763
@@ -1737,7 +1760,19 @@ MonoBehaviour:
   buttons: []
   doOnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4307064424768950591, guid: 8be41ed44ff31e54da7322c6ef0c2642,
+          type: 3}
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!224 &1033203420
@@ -4552,6 +4587,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4307064424768950591, guid: 8be41ed44ff31e54da7322c6ef0c2642,
+          type: 3}
+        m_MethodName: ImportantDialogueComplete
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &6934450031358614776
@@ -4673,3 +4720,26 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6934450031358614779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934450031358614777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d01581c26e25f94e85eaeccd587bc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 6934450031358614780}
+  momArrow: {fileID: 0}
+  isMom: 0
+  isTeacher: 0
+  isMagistrate: 1
+--- !u!64 &6934450031358614780 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4963642410890521561, guid: fde6b43278030224b9c21f702e5f3533,
+    type: 3}
+  m_PrefabInstance: {fileID: 6934450031358614776}
+  m_PrefabAsset: {fileID: 0}
