@@ -999,6 +999,7 @@ MonoBehaviour:
   - {fileID: 1219608823}
   - {fileID: 710607015}
   - {fileID: 1530036195}
+  enabledOnStart: 0
 --- !u!1001 &1189398786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1517,7 +1518,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1182591802}
         m_MethodName: CorrectButtonChosen
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2407,6 +2408,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1182591802}
         m_MethodName: ResetToFirstDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4307064424768950591, guid: 8be41ed44ff31e54da7322c6ef0c2642,
+          type: 3}
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
