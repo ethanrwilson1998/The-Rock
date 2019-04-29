@@ -24,11 +24,37 @@ public class Dialog : MonoBehaviour
     public delegate void ImportantDialogue();
     public static event ImportantDialogue ImportantDialogueComplete;
 
+    [SerializeField] private bool enabledOnStart = false;
+
     private void Start()
     {
         Hide();
         instance = instances[index++];
+        if (enabledOnStart)
+        {
+            EnableDialogBox();
+        }
     }
+
+    // for looping backwards, resetting dialog after clicking the wrong button?
+    public void ResetToFirstDialog()
+    {
+        TurnOffButtons();
+        index = 0;
+        instance = instances[index++];
+
+        foreach(DialogInstance i in instances)
+        {
+            i.Reset();
+        }
+    }
+
+    public void DisableThisDialog()
+    {
+        gameObject.SetActive(false);
+    }
+
+
 
     private void LateUpdate()
     {
@@ -72,8 +98,12 @@ public class Dialog : MonoBehaviour
 
     public void EnableDialogBox()
     {
+        if (instance.ButtonsOn())
+        {
+            return;
+        }
         Show();
-        OnDialogueStart.Invoke();
+        if (OnDialogueStart != null) { OnDialogueStart.Invoke(); }
         title.text = instance.getSpeakerName();
         instance.DisableButtons();
         OnBoxClicked();
@@ -92,7 +122,7 @@ public class Dialog : MonoBehaviour
 
     public void Hide()
     {
-        OnDialogueEnd.Invoke();
+        if (OnDialogueEnd != null) { OnDialogueEnd.Invoke(); }
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).GetType() != typeof(Button))
@@ -104,7 +134,10 @@ public class Dialog : MonoBehaviour
 
     public void OnBoxClicked()
     {
-        clicked = true;
+
+
+        if (!instance.ButtonsOn())
+            clicked = true;
 
     }
 
@@ -131,6 +164,6 @@ public class Dialog : MonoBehaviour
 
     public void CorrectButtonChosen()
     {
-        ImportantDialogueComplete.Invoke();
+        if (ImportantDialogueComplete != null) { ImportantDialogueComplete.Invoke(); }
     }
 }

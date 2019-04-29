@@ -17,4 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogues.unity
     guid: c0b5a6be9a5ae01448f8e9bf571adee2
+  - enabled: 1
+    path: Assets/Scenes/Casper's Room.unity
+    guid: 7f214a750aff5bc4fae79dc7111dac6c
+  - enabled: 1
+    path: Assets/Scenes/Dialogue Test.unity
+    guid: e3dbcef486ff50b499400c5e93a9bac1
+  - enabled: 1
+    path: Assets/Scenes/Mom's Room.unity
+    guid: 67322aaffe6c593409b74ebf6dcf27fa
+  - enabled: 1
+    path: Assets/Scenes/Magistrates.unity
+    guid: b57516390c24cbf4cbbb584d8057bf32
+  - enabled: 1
+    path: Assets/Scenes/School.unity
+    guid: 91f3b758c3df680469129ed5b32218c2
   m_configObjects: {}
