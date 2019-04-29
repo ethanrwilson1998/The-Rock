@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
     public static GameState Instance;
     [SerializeField] private int numDialoguesLeft;
 
-    
 
+    [SerializeField] private bool momComplete;
+    [SerializeField] private bool teacherComplete;
+    [SerializeField] private bool magistrateComplete;
+
+    public bool allDialoguesComplete;
 
     private void Awake()
     {
@@ -32,33 +37,42 @@ public class GameState : MonoBehaviour
     private void OnEnable()
     {
         DontDestroyOnLoad(this.gameObject);
-        Dialog.ImportantDialogueComplete += DecrementDialoguesLeft;
+        //Dialog.ImportantDialogueComplete += DecrementDialoguesLeft;
 
     }
 
     private void OnDisable()
     {
-        Dialog.ImportantDialogueComplete -= DecrementDialoguesLeft;
+        //Dialog.ImportantDialogueComplete -= DecrementDialoguesLeft;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void DecrementDialoguesLeft()
-    {
-        numDialoguesLeft -= 1;
-        if (numDialoguesLeft <= 0)
-        {
-            AllDialoguesComplete();
+        if (momComplete && teacherComplete && magistrateComplete) {
+            allDialoguesComplete = true;
         }
     }
 
-    public void AllDialoguesComplete()
+    
+
+    public void ImportantDialogueComplete(int index)
     {
-        Debug.Log("All dialogues have been complete");
-        // Do stuff here
+        switch (index) {
+            case (0):
+                momComplete = true;
+                break;
+            case (1):
+                teacherComplete = true;
+                break;
+            case (2):
+                magistrateComplete = true;
+                break;
+        }
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
