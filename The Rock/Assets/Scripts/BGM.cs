@@ -13,7 +13,7 @@ public class BGM : MonoBehaviour
     public AudioClip distortedIntro;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         DontDestroyOnLoad(gameObject);
         audio = GetComponent<AudioSource>();
