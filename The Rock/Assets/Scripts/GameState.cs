@@ -13,6 +13,8 @@ public class GameState : MonoBehaviour
     [SerializeField] private bool teacherComplete;
     [SerializeField] private bool magistrateComplete;
 
+    private string lastScene;
+
     public bool allDialoguesComplete;
 
     private void Awake()
@@ -31,7 +33,20 @@ public class GameState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SceneManager.sceneLoaded += SceneLoaded;
+    }
+
+    void SceneLoaded(Scene scene, LoadSceneMode l)
+    {
+        if (scene.name != "GameOver")
+        {
+            lastScene = scene.name;
+        }
+    }
+
+    public string getLastScene()
+    {
+        return lastScene;
     }
 
     private void OnEnable()
