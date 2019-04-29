@@ -162,8 +162,8 @@ public class Dialog : MonoBehaviour
         Hide();
     }
 
-    public void CorrectButtonChosen()
+    public void CorrectButtonChosen(int index)
     {
-        if (ImportantDialogueComplete != null) { ImportantDialogueComplete.Invoke(); }
+        FindObjectOfType<GameState>().ImportantDialogueComplete(index);
     }
 }
