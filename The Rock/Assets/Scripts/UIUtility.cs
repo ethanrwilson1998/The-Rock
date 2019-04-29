@@ -19,4 +19,9 @@ public class UIUtility : MonoBehaviour
     {
         o.SetActive(true);
     }
+
+    public void DisableCollider(Collider b)
+    {
+        b.enabled = false;
+    }
 }

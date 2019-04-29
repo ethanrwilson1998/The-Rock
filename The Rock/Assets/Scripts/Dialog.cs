@@ -92,6 +92,10 @@ public class Dialog : MonoBehaviour
 
     public void EnableDialogBox()
     {
+        if (instance.ButtonsOn())
+        {
+            return;
+        }
         Show();
         if (OnDialogueStart != null) { OnDialogueStart.Invoke(); }
         title.text = instance.getSpeakerName();
