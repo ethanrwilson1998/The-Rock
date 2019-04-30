@@ -41,11 +41,12 @@ public class UIUtility : MonoBehaviour
     {
         FindObjectOfType<BGM>().PlayPiano();
     }
-    
+
     public void PlayTense()
     {
         FindObjectOfType<BGM>().PlayTension();
         Debug.Log("Called");
+    }
 
     public void ReturnToTitle()
     {
