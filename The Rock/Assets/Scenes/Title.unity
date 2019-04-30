@@ -2612,7 +2612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e524cef33d3a64baba36ce9db73baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
+  audio: {fileID: 1745289921}
   piano: {fileID: 8300000, guid: 51becce448f23cf48aee358273208ff3, type: 3}
   tenseBGM: {fileID: 8300000, guid: d63d6013aca409c4aae08cdf4ae3eed9, type: 3}
   outro: {fileID: 8300000, guid: efcc9b377977cff428538bb987ffd197, type: 3}
