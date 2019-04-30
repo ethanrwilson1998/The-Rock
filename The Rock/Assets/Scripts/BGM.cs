@@ -68,6 +68,8 @@ public class BGM : MonoBehaviour
     {
         audio.loop = false;
         audio.clip = distortedIntro;
+        audio.enabled = false;
+        audio.enabled = true;
         audio.Play();
     }
 
@@ -75,6 +77,8 @@ public class BGM : MonoBehaviour
     {
         audio.loop = true;
         audio.clip = piano;
+        audio.enabled = false;
+        audio.enabled = true;
         audio.Play();
     }
 
@@ -83,6 +87,8 @@ public class BGM : MonoBehaviour
         Debug.Log("Got here");
         audio.loop = true;
         audio.clip = tenseBGM;
+        audio.enabled = false;
+        audio.enabled = true;
         audio.Play();
     }
 
@@ -91,6 +97,8 @@ public class BGM : MonoBehaviour
         Debug.Log("Got here");
         audio.loop = false;
         audio.clip = outro;
+        audio.enabled = false;
+        audio.enabled = true;
         audio.Play();
     }
 }
