@@ -6,6 +6,8 @@ public class PauseAtStart : MonoBehaviour
 {
     [SerializeField] private float amount;
 
+    public AudioSource source;
+
     void Awake()
     {
         StartCoroutine(Wait());
@@ -16,7 +18,9 @@ public class PauseAtStart : MonoBehaviour
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(amount);
         Time.timeScale = 1;
-        yield return null;
+        yield return new WaitForSecondsRealtime(1.5f);
+        source.Play();
+
     }
 
     
