@@ -2616,6 +2616,7 @@ MonoBehaviour:
   piano: {fileID: 8300000, guid: 51becce448f23cf48aee358273208ff3, type: 3}
   tenseBGM: {fileID: 8300000, guid: d63d6013aca409c4aae08cdf4ae3eed9, type: 3}
   outro: {fileID: 8300000, guid: efcc9b377977cff428538bb987ffd197, type: 3}
+  distortedIntro: {fileID: 8300000, guid: 8be1a0a02e822ca4188b12e0ed5f5a90, type: 3}
 --- !u!4 &1745289923
 Transform:
   m_ObjectHideFlags: 0

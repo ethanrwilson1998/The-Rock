@@ -31,4 +31,19 @@ public class UIUtility : MonoBehaviour
 
         SceneManager.LoadScene(x);
     }
+
+    public void PlayOutro()
+    {
+        FindObjectOfType<BGM>().PlayOutro();
+    }
+
+    public void PlayPiano()
+    {
+        FindObjectOfType<BGM>().PlayPiano();
+    }
+    public void PlayTense()
+    {
+        FindObjectOfType<BGM>().PlayTension();
+        Debug.Log("Called");
+    }
 }
