@@ -5,11 +5,13 @@ using UnityEngine;
 public class PauseAtStart : MonoBehaviour
 {
     [SerializeField] private float amount;
+    [SerializeField] private float sfxOffset;
 
     public AudioSource source;
 
     void Awake()
     {
+        source.mute = true;
         StartCoroutine(Wait());
     }
 
@@ -18,7 +20,8 @@ public class PauseAtStart : MonoBehaviour
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(amount);
         Time.timeScale = 1;
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(sfxOffset);
+        source.mute = false;
         source.Play();
 
     }

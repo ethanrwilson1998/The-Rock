@@ -35,6 +35,7 @@ public class UIUtility : MonoBehaviour
     public void PlayOutro()
     {
         FindObjectOfType<BGM>().PlayOutro();
+        
     }
 
     public void PlayPiano()
@@ -56,5 +57,10 @@ public class UIUtility : MonoBehaviour
             Destroy(s.gameObject);
         }
         SceneManager.LoadScene("Title");
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
     }
 }

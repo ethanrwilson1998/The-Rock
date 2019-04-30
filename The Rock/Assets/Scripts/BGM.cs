@@ -12,6 +12,7 @@ public class BGM : MonoBehaviour
     public AudioClip tenseBGM;
     public AudioClip outro;
     public AudioClip distortedIntro;
+    public AudioClip wholeSong;
 
     // Start is called before the first frame update
     void Awake()
@@ -70,6 +71,11 @@ public class BGM : MonoBehaviour
         {
             audio.clip = outro;
             audio.loop = false;
+            audio.Play();
+        } else if (scene.name == "Title" || scene.name == "Credits")
+        {
+            audio.clip = wholeSong;
+            audio.loop = true;
             audio.Play();
         }
     }

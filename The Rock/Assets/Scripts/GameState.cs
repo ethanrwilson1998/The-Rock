@@ -25,6 +25,8 @@ public class GameState : MonoBehaviour
         }
         else
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             Instance = this;
             DontDestroyOnLoad(this);
         }
