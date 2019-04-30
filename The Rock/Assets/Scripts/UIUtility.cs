@@ -31,4 +31,14 @@ public class UIUtility : MonoBehaviour
 
         SceneManager.LoadScene(x);
     }
+
+    public void ReturnToTitle()
+    {
+        GameState s = FindObjectOfType<GameState>();
+        if (s != null)
+        {
+            Destroy(s.gameObject);
+        }
+        SceneManager.LoadScene("Title");
+    }
 }
