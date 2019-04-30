@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BGM : MonoBehaviour
 {
+    public static BGM Instance;
     [SerializeField] private AudioSource audio;
 
     public AudioClip piano;
@@ -15,7 +16,16 @@ public class BGM : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        
         audio = GetComponent<AudioSource>();
        
     }

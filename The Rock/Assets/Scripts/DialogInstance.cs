@@ -40,6 +40,14 @@ public class DialogInstance : MonoBehaviour
         }
 
         string x = dialogues[index];
+
+        if (x == "<next>" || x == "<choice>")
+        {
+            if (doOnFinish != null)
+            {
+                doOnFinish.Invoke();
+            }
+        }
         index++;
         return x;
     }
