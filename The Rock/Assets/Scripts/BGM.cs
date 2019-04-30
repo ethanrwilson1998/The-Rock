@@ -12,7 +12,7 @@ public class BGM : MonoBehaviour
     public AudioClip outro;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         DontDestroyOnLoad(gameObject);
         audio = GetComponent<AudioSource>();

@@ -490,7 +490,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c59bb485ad868164bb472410cd06bd86, type: 3}
+    m_Font: {fileID: 12800000, guid: a3bc78a0a84e47a488f035419cef087c, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -693,8 +693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Cassandra
   dialogues:
-  - The Rock's not going to fall
-  - Just go back to sleep and I'll get you up for school in a few hours
+  - The Rock's not gonna fall
+  - Just go back to bed and I'll get you up for school in a few hours
   - <next>
   buttons: []
   doOnFinish:
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Casper
   dialogues:
-  - Ma, I had a dream that the rock is gonna fall!
+  - Ma, I had a dream that the Rock is gonna fall on the town!
   - <next>
   buttons: []
   doOnFinish:
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Cassandra
   dialogues:
-  - Wah!? Oh, Casper, you scared the living daylights outta me!
+  - Wah!? Oh, Casper, you scared the livin' daylights outta me!
   - <next>
   buttons: []
   doOnFinish:
@@ -1856,7 +1856,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0b1866ca7f2c85147b27ce4730c76baf, type: 3}
+    m_Font: {fileID: 12800000, guid: a5222c0b6a54ec046854f4b88c175332, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2317,7 +2317,7 @@ MonoBehaviour:
   speakerName: Cassandra
   dialogues:
   - It's just a bad dream,
-  - go back to sleep now.
+  - go back to bed now.
   - <next>
   buttons: []
   doOnFinish:
@@ -2746,7 +2746,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0b1866ca7f2c85147b27ce4730c76baf, type: 3}
+    m_Font: {fileID: 12800000, guid: a5222c0b6a54ec046854f4b88c175332, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
