@@ -10,17 +10,20 @@ public class BGM : MonoBehaviour
     public AudioClip piano;
     public AudioClip tenseBGM;
     public AudioClip outro;
+    public AudioClip distortedIntro;
 
     // Start is called before the first frame update
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
         audio = GetComponent<AudioSource>();
+       
     }
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += CheckScene;
+
     }
 
     private void OnDisable()
@@ -36,10 +39,58 @@ public class BGM : MonoBehaviour
 
     private void CheckScene(Scene scene, LoadSceneMode mode)
     {
-        if (audio.isPlaying == false && scene.name == "Town")
+        if (scene.name == "Casper's Room")
         {
+            audio.loop = true;
             audio.clip = piano;
             audio.Play();
         }
+        else if (scene.name == "Dream")
+        {
+            audio.clip = distortedIntro;
+            audio.loop = false;
+            audio.Play();
+        }
+        else if (scene.name == "TheRock")
+        {
+            audio.clip = tenseBGM;
+            audio.loop = true;
+            audio.Play();
+        } else if (scene.name == "GameOver")
+        {
+            audio.clip = outro;
+            audio.loop = false;
+            audio.Play();
+        }
+    }
+
+    public void PlayIntro()
+    {
+        audio.loop = false;
+        audio.clip = distortedIntro;
+        audio.Play();
+    }
+
+    public void PlayPiano()
+    {
+        audio.loop = true;
+        audio.clip = piano;
+        audio.Play();
+    }
+
+    public void PlayTension()
+    {
+        Debug.Log("Got here");
+        audio.loop = true;
+        audio.clip = tenseBGM;
+        audio.Play();
+    }
+
+    public void PlayOutro()
+    {
+        Debug.Log("Got here");
+        audio.loop = false;
+        audio.clip = outro;
+        audio.Play();
     }
 }
