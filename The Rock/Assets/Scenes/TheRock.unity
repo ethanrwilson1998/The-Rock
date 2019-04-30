@@ -384,7 +384,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0b1866ca7f2c85147b27ce4730c76baf, type: 3}
+    m_Font: {fileID: 12800000, guid: a5222c0b6a54ec046854f4b88c175332, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c59bb485ad868164bb472410cd06bd86, type: 3}
+    m_Font: {fileID: 12800000, guid: a3bc78a0a84e47a488f035419cef087c, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -903,8 +903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: ' '
   dialogues:
-  - Casper has been spending every waking hour building supports for the rock,  when
-    suddenly, a bunch of townsfolk appear
+  - 'Casper has been spending every waking moment building supports for the Rock  '
+  - When suddenly, a group of townsfolk appear
   - <next>
   buttons: []
   doOnFinish:
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: ' '
   dialogues:
-  - The townsfolk all start throwing stones at Casper!
+  - The townsfolk begin throwing stones at Casper!
   - Enough of them hit The Rock and cause it to start tilting off the edge of the
     cliff.
   - <next>
@@ -1737,7 +1737,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c59bb485ad868164bb472410cd06bd86, type: 3}
+    m_Font: {fileID: 12800000, guid: a3bc78a0a84e47a488f035419cef087c, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -1947,7 +1947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Townsfolk
   dialogues:
-  - You still think The Rock's gonna fall? You are crazy!
+  - You still think the Rock's gonna fall? You really are crazy!
   - <next>
   buttons: []
   doOnFinish:
@@ -2626,7 +2626,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c59bb485ad868164bb472410cd06bd86, type: 3}
+    m_Font: {fileID: 12800000, guid: a3bc78a0a84e47a488f035419cef087c, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -2827,8 +2827,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: 
   dialogues:
-  - You watch The Rock tumble off the edge, careening into the town you called home.
-  - Well, you were right, but it feels empty.
+  - You watch the Rock tumble off the edge, careening into the town you called home.
+  - Well, you were right, but it's an empty victory
   buttons: []
   doOnFinish:
     m_PersistentCalls:
@@ -2977,7 +2977,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0b1866ca7f2c85147b27ce4730c76baf, type: 3}
+    m_Font: {fileID: 12800000, guid: a5222c0b6a54ec046854f4b88c175332, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2989,7 +2989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Stop The
+  m_Text: 'Stop the
 
     Rock'
 --- !u!222 &2115152734
@@ -3050,9 +3050,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: 
   dialogues:
-  - You throw your body under The Rock to stop if from tumbling onto your town
-  - You feel your body being crushed under The Rock, but you also feel it stop rocking
-    out of control.
+  - You throw your body under the Rock to stop if from tumbling onto your town
+  - You feel your body being crushed under the Rock's weight, but, in return, the
+    rock stands still.
+  - The town survives, but you won't
   buttons: []
   doOnFinish:
     m_PersistentCalls:
